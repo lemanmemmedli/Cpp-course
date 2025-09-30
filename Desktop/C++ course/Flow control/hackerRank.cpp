@@ -338,12 +338,21 @@ int main()
     // float Z;
     // cin >> X >> Y >> Z;
 
-    // if (Z >= Y && Z >= X && Y>=X)
+    // if (Z >= Y && Y >= X )
     // {
-    //     cout << (X*2) << (Y*2) << (Z*2) << endl;
+    //     cout << (X*2)<<" "  << (Y*2)<<" "  << (Z*2) << endl;
     // }
-    // else if(X<0 || Y<0 || Z<0){
-    //     cout << -X << -Y << -Z <<endl;
+    // else  {
+    //     if(X<0){
+    //         X=-X;
+    //     }
+    //     if(Y<0){
+    //         Y=-Y;
+    //     }
+    //     if(Z<0){
+    //         Z=-Z;
+    //     }
+    //     cout << X << " " << Y << " " << Z;
     // }
 
     // 33---------------------
@@ -421,17 +430,49 @@ int main()
     // }
 
     // 38-----------------
-    float X,Y;
-    cin >> X >> Y;
+    // float X,Y;
+    // cin >> X >> Y;
 
-    if (X<0 && Y<0){
-        cout << -X << " " << -Y <<endl;
-    }else if (X<0 || Y<0){
-        cout << X+0.5 << " " << Y+0.5 << endl;
-    }else if (X>0  && Y >0 && X<0.5 || X>2 && Y<0.5 || Y>2) {
-        cout << X/10 << " " << Y/10 <<endl;
+    // if (X<0 && Y<0){
+    //     cout << -X << " " << -Y <<endl;
+    // }else if (X<0 || Y<0){
+    //     cout << X+0.5 << " " << Y+0.5 << endl;
+    // }else if (X>0  && Y >0 && X<0.5 || X>2 && Y<0.5 || Y>2) {
+    //     cout << X/10 << " " << Y/10 <<endl;
 
-    }else {
-        cout <<X << " " << Y << endl;
-    }
+    // }else {
+    //     cout <<X << " " << Y << endl;
+    // }
+
+    // 39-------------------------
+    // int A,B,R,S;
+    // cin >>A >>B >> R >>S;
+
+    // if (A%B==R || A%B==S){
+    //     cout << "Yes" <<endl;
+    // }else {
+    //     cout << "No" <<endl;
+    // }
+
+    // 40---------------------
+    // int A,B;
+    // A=B;
+    // cout << B << " " << A;
+
+    // // 44-------------------
+    // int a = 1;
+    // cout << ++a + ++a << endl;
+    // cout << a << endl;
+
+    // 47--------------------
+    int x = 3, y = 4, z = 2;
+    int p = 1;
+    
+    p *= x;
+    p *= y;
+    p -= x + y + z;
+    
+    cout << "Value of p is: " << p;
+
+
 }
