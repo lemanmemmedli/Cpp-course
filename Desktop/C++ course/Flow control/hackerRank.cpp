@@ -398,22 +398,20 @@ int main()
     // float C;
     // cin >> A >> B >> C;
 
-    // if ((1 < A && A < 3))
-    // {
-    //     cout << A << endl;
-    // }
-    //  if ((1 < B && B < 3))
-    // {
-    //     cout << B << endl;
-    // }
-    // if ((1 < C && C < 3))
-    // {
-    //     cout << C << endl;
-    // }
-   
+    // if( (A<1 || A>3) && (B<1 || B>3) && (C<1 || C>3) ){
+    //     cout << "No Numbers Found" << endl;       
+    // }   
     // else
     // {
-    //     cout << "No Numbers Found" << endl;
+    //     if((A>1 && A<3)){
+    //         cout<< A << " ";
+    //     }
+    //     if((B>1 && B<3)){
+    //         cout<< B << " ";
+    //     }
+    //     if((C>1 && C<3)){
+    //         cout<< C << " ";
+    //     }
     // }
 
 
@@ -454,9 +452,9 @@ int main()
     //     cout << "No" <<endl;
     // }
 
-    // 40---------------------
+    // // 40---------------------
     // int A,B;
-    // A=B;
+    // cin >> A>>B;
     // cout << B << " " << A;
 
     // // 44-------------------
@@ -465,14 +463,14 @@ int main()
     // cout << a << endl;
 
     // 47--------------------
-    int x = 3, y = 4, z = 2;
-    int p = 1;
+    // int x = 3, y = 4, z = 2;
+    // int p = 1;
     
-    p *= x;
-    p *= y;
-    p -= x + y + z;
+    // p *= x;
+    // p *= y;
+    // p -= x + y + z;
     
-    cout << "Value of p is: " << p;
+    // cout << "Value of p is: " << p;
 
 
 }
