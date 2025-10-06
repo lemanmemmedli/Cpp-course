@@ -188,4 +188,27 @@ int main()
     // {
     //     cout << "NO" << endl;
     // }
+
+
+    // 56-----------------------
+    // int N;
+    // cin >> N;
+
+    // for (int i=1;i*i<=N;i++){
+    //     for(int j=i+1;j*j<=N;j++){
+    //         if(i != j && i*i + j*j<=N){
+    //            int result=i*i+j*j;
+    //            cout<<i <<"^2 "<<"+ "<<j << "^2"<<" "<<"="<<" "<<result<<endl;                
+    //         }
+    //     }
+    // }
+
+    // 57------------------------
+    int A,B;
+    cin>>A;
+    cin>>B;
+    
+    // while(A>=1 && B<=10^9){
+    //     if(A)
+    // }
 }
