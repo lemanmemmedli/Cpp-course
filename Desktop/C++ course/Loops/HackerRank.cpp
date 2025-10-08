@@ -232,33 +232,26 @@ int main()
     // }
     // cout << lcm <<endl;
 
-    // 59----------------------------
-    int a, b,m=0, N, lcm;
-    cin >> N;
+    // // 59----------------------------
+    // int N,lcm=1;
+    // cin >> N;
 
-    for (int i = 1; i <= N;i++)
-    {
-        for (int j = 2; j <= N; j++)
-        {
-            m=(i*j)*m;
-            if(m%i==0 && m%j==0){
-                lcm=m;
-            }
-
-        }
-    }
-    cout<<lcm<<endl;
+    // for(int i=2;i<=N;i++){
+    //     for(int j=lcm;j<=lcm*i;j++){
+    //         if(j%i==0 && j%lcm==0){
+    //             lcm=j;
+    //             break;
+    //         }
+    //     }
+    // }
+    // cout<<lcm<<endl;
 
     // // 60-----------------------
     // int N;
     // cin >> N;
-    // bool found=false;
     // for (int i=1;i<=N;i++){
     //     if(N%i==0){
     //         cout << i <<" ";
-    //     }else if(N%i !=0){
-    //         found=false;
-
     //     }
     // }
 
@@ -279,4 +272,87 @@ int main()
     // {
     //     cout << "NO" << endl;
     // }
+
+    // // 61--------------
+    // int N;
+    // cin >> N;
+    // bool found=false;
+
+    // for(int i=0;pow(2,i)<=N;i++){
+    //     if((pow(2,i))==N){
+    //         found=true;
+    //         break;
+    //     }
+    // }
+
+    // if(found){
+    //     cout<<"Yes";
+    // }else{
+    //     cout<<"No";
+    // }
+
+    // // 62--------------------
+    // int N;
+    // cin >> N;
+    // bool found=true;
+
+    // if(N<2){
+    //     found=false;
+    // }
+
+    // for(int i=2 ;i<=N/2 ;i++){
+    //     if(N % i==0){
+    //         found=false;
+    //         break;
+    //     }
+    // }
+    // if(found){
+    //     cout<<"Yes";
+    // }else{
+    //     cout<<"No";
+    // }
+
+    // // 63------------------------
+    // int N1, N2;
+    // cin >> N1 >> N2;
+
+    // for (int i = N1; i <= N2; i++)
+    // {
+    //     if (i < 2) continue;
+
+    //         bool prime = true;
+
+    //     for (int j = 2; j <= i / 2; j++)
+    //     {
+    //         if (i % j == 0)
+    //         {
+    //             prime = false;
+
+    //             break;
+    //         }
+    //     }
+    //     if (prime)
+    //     {
+    //         cout << i << " ";
+    //     }
+    // }
+
+    // 64---------------------------
+     int N;
+     cin >> N;
+
+     for (int i=2;i*i <=N;i++){
+        int count=0;
+        while(N%i==0){
+            count++;
+            N/=i;
+        }
+        if(count>0){
+            cout << i << "^" << count <<" ";
+        }
+     }
+     if(N>1){
+        cout<<N<< "^1";
+     }
+
 }
