@@ -337,22 +337,80 @@ int main()
     //     }
     // }
 
-    // 64---------------------------
-     int N;
-     cin >> N;
+    // // 64---------------------------
+    //  int N;
+    //  cin >> N;
 
-     for (int i=2;i*i <=N;i++){
-        int count=0;
-        while(N%i==0){
-            count++;
-            N/=i;
+    //  for (int i=2;i*i <=N;i++){
+    //     int count=0;
+    //     while(N%i==0){
+    //         count++;
+    //         N/=i;
+    //     }
+    //     if(count>0){
+    //         cout << i << "^" << count <<" ";
+    //     }
+    //  }
+    //  if(N>1){
+    //     cout<<N<< "^1";
+    //  }
+
+    // 65----------------------------
+    int N;
+    cin >>N;
+
+    for (int p=2;p<=N;p++){
+
+        bool prime=true;
+        if(p<2) prime=false;
+        for(int i=2;i*i<=p;i++){
+            if(p%i==0){
+                prime=false;
+                break;
+            }
         }
-        if(count>0){
-            cout << i << "^" << count <<" ";
+
+        if(prime){
+            int count=0;
+            int temp=N;
+            while(temp>0){
+                temp/=p;
+                count+=temp;
+            }
+            cout<<p<<"^"<<count<<" ";
         }
-     }
-     if(N>1){
-        cout<<N<< "^1";
-     }
+    }
+
+   
+
+
+    // // 66--------------------
+    // int N;
+    // cin >> N;
+    // bool prime=true;
+
+    // if(N<2){
+    //     prime=false;
+    // }
+
+    // for (int i=2;i<=N;i++){
+    //     if(N % i==0){
+    //         prime=false;
+    //         break;
+
+
+    //     }
+    //     if(prime){
+    //         cout << i << " ";
+    //     }
+    // }
+
+
+    // // 68----------------------------
+    // int N;
+    // cin>>N;
+
+   
+    
 
 }
