@@ -79,18 +79,6 @@ int main()
 
     //     cout<<sum<<endl;
 
-    // // 50-----------------------
-    // int N;
-    // cin>>N;
-
-    // while (N>0)
-    // {
-    //     int tail=N%10;
-    //     if(tail)
-
-    //     N=N/10;
-    // }
-
     // 52------------------
     // int N;
     // cin >> N;
@@ -160,7 +148,7 @@ int main()
     //     }
     //     cout << count << endl;
 
-    // 55------------------------------------
+    // // 55------------------------------------
     // int N;
     // cin >> N;
     // bool found = false;
@@ -174,11 +162,12 @@ int main()
     //             found = true;
     //             break;
     //         }
-    //         if (found)
+
+    //     }
+    //     if (found)
     //         {
     //             break;
     //         }
-    //     }
     // }
     // if (found)
     // {
@@ -355,62 +344,108 @@ int main()
     //     cout<<N<< "^1";
     //  }
 
-    // 65----------------------------
-    int N;
-    cin >>N;
-
-    for (int p=2;p<=N;p++){
-
-        bool prime=true;
-        if(p<2) prime=false;
-        for(int i=2;i*i<=p;i++){
-            if(p%i==0){
-                prime=false;
-                break;
-            }
-        }
-
-        if(prime){
-            int count=0;
-            int temp=N;
-            while(temp>0){
-                temp/=p;
-                count+=temp;
-            }
-            cout<<p<<"^"<<count<<" ";
-        }
-    }
-
-   
-
-
-    // // 66--------------------
+    // // 65----------------------------
     // int N;
-    // cin >> N;
-    // bool prime=true;
+    // cin >>N;
 
-    // if(N<2){
-    //     prime=false;
-    // }
+    // for (int p=2;p<=N;p++){
 
-    // for (int i=2;i<=N;i++){
-    //     if(N % i==0){
-    //         prime=false;
-    //         break;
-
-
+    //     bool prime=true;
+    //     if(p<2) prime=false;
+    //     for(int i=2;i*i<=p;i++){
+    //         if(p%i==0){
+    //             prime=false;
+    //             break;
+    //         }
     //     }
+
     //     if(prime){
-    //         cout << i << " ";
+    //         int count=0;
+    //         int temp=N;
+    //         while(temp>0){
+    //             temp/=p;
+    //             count+=temp;
+    //         }
+    //         cout<<p<<"^"<<count<<" ";
     //     }
     // }
 
+    // 66--------------------
+    // int N=2;
+    // cin>>N;
+    // bool prime1=true;
+    // bool prime2=true;
+
+    // for(int i=2;i<=N;i++){
+    //     for(int k=2;k<i;k++){
+    //         if(i%k==0){
+    //             prime1=false;
+    //             break;
+    //         }
+    //     }
+    //     if(prime1 && (i+2)<=N){
+    //         for(int k=2;k<i+2;k++){
+    //             if((i+2)%k==0){
+    //                 prime2=false;
+    //                 break;
+    //             }
+    //         }
+    //         if(prime2){
+    //             cout<<'('<<i<<','<<' ' <<i+2<<')'<<endl;
+    //         }
+    //     }
+
+    //     prime1=true;
+    //     prime2=true;
+
+    // }
 
     // // 68----------------------------
-    // int N;
-    // cin>>N;
+    // int N=2;
+    // cin >> N;
 
-   
+    // for (int i = 2; i <= N; i++)
+    // {
+    //     int sum = 0;
+    //     for (int j = 1; j < i; j++)
+    //     {
+    //         if (i % j == 0)
+    //         {
+    //             sum += j;
+
+    //         }
+    //     }
+    //     if (sum == i)
+    //             {
+
+    //                 cout << i << " ";
+    //             }
+    // }
+
+    //    67---------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // for(int i=n;i<=m;++i){
+    //     int prime2=0;
+    //     for(int j=1;j<=i/2;++j){
+    //         if(i%j==0){
+    //             prime2+=j;
+    //         }
+
+    //     }
+    //     int prime1=0;
+    //     for(int k=1;k<=prime2/2;++k){
+    //         if(prime2%k==0){
+    //             prime1+=k;
+    //         }
+    //     }
+    //     if(i==prime1 && prime2>i && prime2<m){
+    //         cout<<'(' <<prime1<<", "<<prime2<<')'<<endl;
+    //     }
+    // }
+
+    // 59----------------
     
-
+ 
 }
