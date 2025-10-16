@@ -178,47 +178,239 @@ int main()
     // }
     // cout<<"minimum = "<<min<<", "<<"maximum = "<<max<<endl;
 
-    // 76----------------------------
+    // // 76----------------------------
+    // int size;
+    // cin >> size;
+
+    // int sequnece[size];
+
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     cin >> sequnece[i];
+    // }
+
+    // int max = sequnece[0];
+    // int count = 0;
+    // int FirstIndex = -1;
+    // int LastIndex = -1;
+
+    // for(int i=0;i<size;++i){
+    //     if(sequnece[i]>max){
+    //         max=sequnece[i];
+    //     }
+    // }
+
+    // for(int i=0;i<size;++i){
+    //     if(max==sequnece[i]){
+    //         count++;
+    //         LastIndex=i;
+
+    //     }
+    // }
+    // for(int i=0;i<size;++i){
+    //     if(max==sequnece[i]){
+    //         FirstIndex=i;
+    //         break;
+
+    //     }
+    // }
+
+    // cout << "The maximum element is: " << max << endl;
+    // cout << "The number of occurrences of the maximum element is: " << count << endl;
+    // cout << "The position of the first maximum element is: " << FirstIndex << endl;
+    // cout << "The position of the last maximum element is: " << LastIndex << endl;
+
+    // // 78-----------------------------
+    // int size;
+    // cin>>size;
+
+    // int arr[size];
+
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+
+    // int maxcount=0;
+    // int mincount=0;
+
+    // for(int i=1;i<size-1;++i){
+    //     if(arr[i]<arr[i-1] && arr[i]<arr[i+1]){
+    //         mincount++;
+
+    //     }
+    //     if(arr[i]>arr[i-1] && arr[i]>arr[i+1]){
+    //         maxcount++;
+    //     }
+    // }
+
+    // cout<<"Local Minima: "<<mincount<<endl;
+    // cout<<"Local Maxima: "<<maxcount<<endl;
+
+    // 79------------------------------------
+    // int size;
+    // cin>>size;
+
+    // int arr[size];
+
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+
+    // int count=1;
+
+    // for(int i=1;i<size;++i){
+    //     if(arr[i] !=arr[i-1]){
+    //         count++;
+
+    //     }
+    // }
+    // cout<<"Distinct Elements: "<<count<<endl;
+
+    // // 80--------------------------
+    // int size;
+    // cin >> size;
+
+    // int arr[size];
+
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    // int count = 1;
+
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     bool found = false;
+    //     for (int j = 0; j < i; ++j)
+    //     {
+    //         if (arr[i] == arr[j])
+    //         {
+    //             found = true;
+    //             break;
+    //         }
+    //     }
+    //     if (!found)
+    //     {
+    //         count++;
+    //     }
+    // }
+
+    // cout <<"Distinct Elements: "<<count;
+
+    // // 81-------------------------------
+    // int size;
+    // cin >> size;
+    // int i, k, ans = 0;
+
+    // int arr[size];
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    // i = 1;
+    // k = 1;
+
+    // while (i <= size)
+    // {
+    //     if (arr[i] == k)
+    //     {
+    //         k++;
+    //     }
+    //     else
+    //     {
+    //         k = 1;
+    //     }
+    //     if (k == 11)
+    //     {
+    //         ans++;
+    //         k = 1;
+    //     }
+    //     i++;
+    // }
+    // cout << ans;
+
+    // // 82-----------------------------------
+    // int size;
+    // cin >> size;
+
+    // int arr[size];
+
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    // int count = 0;
+    // int maxcount = 0;
+
+    // for (int i = 0; i < size; ++i)
+    // {
+    //     if (arr[i] == 0)
+    //     {
+    //         count++;
+    //         if (count > maxcount)
+    //         {
+    //             maxcount = count;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         count = 0;
+    //     }
+    // }
+
+    // cout << "Length of Maximum Consecutive Zeros: " << maxcount;
+
+    // // 83----------------------------
+    // int size;
+    // cin>>size;
+
+    // int arr[size];
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+
+    // int length=0;
+    // int maxlength=0;
+
+    // for(int i=0;i<size;++i){
+    //     if(arr[i]>arr[i-1]){
+    //         length++;
+    //         if(length>maxlength){
+    //             maxlength=length;
+    //         }
+    //     }else{
+    //         length=0;
+    //     }
+    // }
+    // cout<<"Length of Largest Ascending Portion: "<<maxlength;
+
+
+    // 86--------------------------
     int size;
-    cin >> size;
+    cin>>size;
 
-    int sequnece[size];
-
-    for (int i = 0; i < size; ++i)
-    {
-        cin >> sequnece[i];
-    }
-
-    int max = sequnece[0];
-    int count = 0;
-    int FirstIndex = -1;
-    int LastIndex = -1;
+    int arr[size];
 
     for(int i=0;i<size;++i){
-        if(sequnece[i]>max){
-            max=sequnece[i];
-        }
+        cin>>arr[i];
     }
+    bool found=false;
 
     for(int i=0;i<size;++i){
-        if(max==sequnece[i]){
-            count++;
-            LastIndex=i;
-
+        if(arr[i]==arr[size-1-i]){
+            found=true;
+        }else{
+            found=false;
         }
     }
-    for(int i=0;i<size;++i){
-        if(max==sequnece[i]){           
-            FirstIndex=i;
-            break;
-
-        }
+    if(found){
+        cout<<"Symmetrical";
+    }else{
+        cout<<"Not Symmetrical";
     }
-
-    cout << "The maximum element is: " << max << endl;
-    cout << "The number of occurrences of the maximum element is: " << count << endl;
-    cout << "The position of the first maximum element is: " << FirstIndex << endl;
-    cout << "The position of the last maximum element is: " << LastIndex << endl;
 
 
 }
