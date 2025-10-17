@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <math.h>
+#include <cmath>
+
 
 using namespace std;
 
@@ -388,29 +390,148 @@ int main()
     // cout<<"Length of Largest Ascending Portion: "<<maxlength;
 
 
-    // 86--------------------------
-    int size;
-    cin>>size;
+    // // 86--------------------------
+    // int size;
+    // cin>>size;
 
-    int arr[size];
+    // int arr[size];
 
-    for(int i=0;i<size;++i){
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+    // bool found=false;
+
+    // for(int i=0;i<size;++i){
+    //     if(arr[i]==arr[size-1-i]){
+    //         found=true;
+    //     }else{
+    //         found=false;
+    //     }
+    // }
+    // if(found){
+    //     cout<<"Symmetrical";
+    // }else{
+    //     cout<<"Not Symmetrical";
+    // }
+
+
+    // // 87-----------------------
+    // int size;
+    // cin>>size;
+
+    // int arr[size];
+
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+    // int x;
+    // cin>>x;
+    // int max=arr[0];
+    // int min=arr[0];
+    // int sum=0;
+   
+
+    // for(int i=0;i<size;++i){
+    //     if(arr[i]>max){
+    //         max=arr[i];
+    //     }
+    //     if(arr[i]<min){
+    //         min=arr[i];
+    //     }
+    //     sum+=arr[i];
+        
+
+    // }
+    // double ave = (double)sum / size;
+
+
+    // int a=abs(x-min);
+    // int b=abs(x-max);
+    // int c=abs(x-ave);
+
+    // if(a<b && a<c){
+    //     cout<<"Minimum";
+    // }
+    // if(b<a && b<c){
+    //     cout<<"Maximum";
+    // }
+    // if(c<a && c<b){
+    //     cout<<"Mean";
+    // }
+
+
+
+    // // 91------------------------------
+    // int size,temp;
+    // cin>>size;
+
+    // int arr[size];
+
+    // for(int i=0;i<size;++i){
+    //     cin>>arr[i];
+    // }
+
+    // temp=arr[size-1];
+
+    // for(int i=size-1;i>0;i--){
+    //     arr[i]=arr[i-1];
+    // }
+    // arr[0]=temp;
+
+    // for(int i=0;i<size;i++){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    // // 89-----------------------------
+    // int N;
+    // cin>>N;
+
+    // int arr[N];
+
+    // for(int i=0;i<N;++i){
+    //     cin>>arr[i];
+    // }
+    // int k;
+    // cin>>k;
+
+
+    // for(int i=0;i<N;++i){
+    //     if(i==k){
+          
+    //     }
+    // }
+
+
+    // for(int i=N;i>0;i--){
+    //     cout<<arr[i]<<" ";
+    // }
+
+
+
+    // 92-------------------------
+    int N;
+    cin>>N;
+
+    double arr[N];
+
+    for(int i=0;i<N;++i){
         cin>>arr[i];
     }
-    bool found=false;
+    
+    double newarr[100];
+    newarr[0]=arr[0];
+    newarr[N-1]=arr[N-1];
+    
+    for(int i=0;i<N-1;++i){
+        double sum=arr[i-1]+arr[i+1];
+        newarr[i]=sum/2;
 
-    for(int i=0;i<size;++i){
-        if(arr[i]==arr[size-1-i]){
-            found=true;
-        }else{
-            found=false;
-        }
     }
-    if(found){
-        cout<<"Symmetrical";
-    }else{
-        cout<<"Not Symmetrical";
+
+    for(int i=0;i<N;++i){
+        cout<<newarr[i]<<" ";
     }
+    
 
 
 }
