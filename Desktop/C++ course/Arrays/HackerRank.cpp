@@ -3,7 +3,6 @@
 #include <math.h>
 #include <cmath>
 
-
 using namespace std;
 
 int main()
@@ -389,7 +388,6 @@ int main()
     // }
     // cout<<"Length of Largest Ascending Portion: "<<maxlength;
 
-
     // // 86--------------------------
     // int size;
     // cin>>size;
@@ -414,7 +412,6 @@ int main()
     //     cout<<"Not Symmetrical";
     // }
 
-
     // // 87-----------------------
     // int size;
     // cin>>size;
@@ -429,7 +426,6 @@ int main()
     // int max=arr[0];
     // int min=arr[0];
     // int sum=0;
-   
 
     // for(int i=0;i<size;++i){
     //     if(arr[i]>max){
@@ -439,11 +435,9 @@ int main()
     //         min=arr[i];
     //     }
     //     sum+=arr[i];
-        
 
     // }
     // double ave = (double)sum / size;
-
 
     // int a=abs(x-min);
     // int b=abs(x-max);
@@ -458,8 +452,6 @@ int main()
     // if(c<a && c<b){
     //     cout<<"Mean";
     // }
-
-
 
     // // 91------------------------------
     // int size,temp;
@@ -494,44 +486,99 @@ int main()
     // int k;
     // cin>>k;
 
-
     // for(int i=0;i<N;++i){
     //     if(i==k){
-          
+
     //     }
     // }
-
 
     // for(int i=N;i>0;i--){
     //     cout<<arr[i]<<" ";
     // }
 
+    // // 92-------------------------
+    // int N;
+    // cin>>N;
 
+    // double arr[N];
 
-    // 92-------------------------
+    // for(int i=0;i<N;++i){
+    //     cin>>arr[i];
+    // }
+
+    // double newarr[100];
+    // newarr[0]=arr[0];
+    // newarr[N-1]=arr[N-1];
+
+    // for(int i=0;i<N-1;++i){
+    //     double sum=arr[i-1]+arr[i+1];
+    //     newarr[i]=sum/2;
+
+    // }
+
+    // for(int i=0;i<N;++i){
+    //     cout<<newarr[i]<<" ";
+    // }
+
+    //     // 93---------------------------------
+    //     int N;
+    //     cin>>N;
+
+    //     int arr[N];
+
+    //     for(int i=0;i<N;++i){
+    //         cin>>arr[i];
+    //     }
+
+    //    int result[N];
+    //    int pos=0;
+
+    //    for(int i=0;i<N;++i){
+    //        if(arr[i]>0){
+    //         result[pos]=arr[i];
+    //         pos++;
+    //        }
+    //    }
+    //    for(int i=0;i<N;++i){
+    //        if(arr[i]<0){
+    //         result[pos]=arr[i];
+    //         pos++;
+    //        }
+    //    }
+    //    for(int i=0;i<N;++i){
+    //        cout<<result[i]<<" ";
+    //    }
+
+    //   94---------------------------
     int N;
-    cin>>N;
+    cin >> N;
 
-    double arr[N];
-
-    for(int i=0;i<N;++i){
-        cin>>arr[i];
+    int arr[N];
+    for (int i = 0; i < N; ++i)
+    {
+        cin >> arr[i];
     }
-    
-    double newarr[100];
-    newarr[0]=arr[0];
-    newarr[N-1]=arr[N-1];
-    
-    for(int i=0;i<N-1;++i){
-        double sum=arr[i-1]+arr[i+1];
-        newarr[i]=sum/2;
+    int result[N];
+    int index = 0;
 
+    for (int i = 0; i < N; ++i)
+    {
+        if (arr[i] < 0 && (arr[i] < i + 1 || arr[i]==i+1))
+        {
+            result[index] = arr[i];
+            index++;
+        }
     }
 
-    for(int i=0;i<N;++i){
-        cout<<newarr[i]<<" ";
+    for (int i = 0; i < N; ++i)
+    {
+        if (arr[i] > 0 &&  (arr[i] < i + 1 || arr[i]==i+1))
+        {
+            result[index] = arr[i];
+            index++;
+        }
     }
-    
-
-
+    for(int i = 0; i < N; ++i){
+        cout<<result[i]<<" ";
+    }
 }
