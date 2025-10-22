@@ -549,36 +549,96 @@ int main()
     //        cout<<result[i]<<" ";
     //    }
 
-    //   94---------------------------
-    int N;
-    cin >> N;
+    // //   94---------------------------
+    // int N;
+    // cin >> N;
+
+    // int arr[N];
+    // for (int i = 0; i < N; ++i)
+    // {
+    //     cin >> arr[i];
+    // }
+    // for(int i=0;i<N;++i){
+    //     for(int j=i+1;j<N;++j){
+    //         if(arr[i]>arr[j]){
+    //            swap(arr[i],arr[i+1]);
+
+    //         }
+    //     }
+    // }
+
+    // for(int i = 0; i < N; ++i){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    // // 88------------------------------
+    // int N,i,k;
+    // cin>>N;
+
+    // int arr[N];
+
+    // for(int i=1;i<=N;i++){
+    //     cin>>arr[i];
+    // }
+
+    // cin>>k;
+
+    // for(int i=1;i<=k/2;i++){
+    //     swap(arr[i],arr[k-i+1]);
+    // }
+
+    //  for(int i = 1; i <= N; i++){
+    //     cout<<arr[i]<<" "<<endl;
+    // }
+
+    // 89------------------------
+    // int N, k;
+    // cin >> N;
+
+    // int arr[N];
+
+    // for (int i = 1; i <= N; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+    // cin >> k;
+
+    // int left=k;
+    // int right=N;
+
+    // while(right>left){
+    //     swap(arr[left],arr[right]); //12345678
+    //     left++;
+    //     right--;
+    // }
+
+    // for(int i=1;i<=N;i++){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    // 90---------------------------
+    int N,k,l;
+    cin>>N;
 
     int arr[N];
-    for (int i = 0; i < N; ++i)
-    {
-        cin >> arr[i];
+    for(int i=1;i<=N;i++){
+        cin>>arr[i];
     }
-    int result[N];
-    int index = 0;
+    cin>>k;
+    cin>>l;
 
-    for (int i = 0; i < N; ++i)
-    {
-        if (arr[i] < 0 && (arr[i] < i + 1 || arr[i]==i+1))
-        {
-            result[index] = arr[i];
-            index++;
-        }
+    int left=k;
+    int right=l;
+
+    while(right>left){
+        swap(arr[right],arr[left]);
+        left++;
+        right--;
     }
 
-    for (int i = 0; i < N; ++i)
-    {
-        if (arr[i] > 0 &&  (arr[i] < i + 1 || arr[i]==i+1))
-        {
-            result[index] = arr[i];
-            index++;
-        }
+    for(int i=1;i<N;i++){
+        cout<<arr[i]<<" ";
     }
-    for(int i = 0; i < N; ++i){
-        cout<<result[i]<<" ";
-    }
+    
+
 }
