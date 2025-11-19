@@ -91,28 +91,236 @@ int main()
     //     cout<<endl;
     // }
 
-    // 149-------------------------------
-    int n;
-    cin>>n;
+    // // 149-------------------------------
+    // int n;
+    // cin>>n;
 
-    int x[n][n];
-    int Msum=0;
-    int Ssum=0;
+    // int x[n][n];
+    // int Msum=0;
+    // int Ssum=0;
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<n;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    //     for(int i=0;i<n;++i){
+    //         Msum+=x[i][i];
+    //     }
+
+    //     for(int i=0;i<n;++i){
+    //     Ssum+=x[0][n-1-i];           
+        
+    // }
+
+    // // 150-----------------------
+    // int n;
+    // cin>>n;
+
+    // int x[n][n];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<n;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    //     for(int i=0;i<n;++i){
+    //     for(int j=i+1;j<n;++j){
+    //         swap(x[i][j],x[j][i]);
+    //     }
+    // }
+
+    //     for(int i=0;i<n;++i){
+    //     for(int j=0;j<n;++j){
+    //         cout<<x[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // // 151--------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    
+    // for(int i=0;i<n;++i){
+    //    int sum=0;
+    //     for(int j=0;j<m;++j){
+    //     sum+=x[i][j];
+    //     }
+    //     cout<<sum<<" ";
+    // }
+
+    // // 152--------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // for(int i=0;i<n;++i){
+    //     int product=1;
+    //     for(int j=0;j<m;++j){
+    //        product*=x[i][j];
+    //     }
+    //     cout<<product<<" ";
+    // }
+
+
+    // // 153---------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+    // for(int i=0;i<m;++i){
+    //     for(int j=0;j<n;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+   
+    // for(int i=0;i<m;++i){
+    //     int min=x[i][0];
+    //     for(int j=1;j<n;++j){
+    //        if(x[i][j]<min){
+    //            min=x[i][j];              
+    //        }
+    //     }
+    //     cout<<min<<" ";
+    // }
+
+    // // 154-----------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // for(int j=0;j<m;++j){
+    //     int sum=0;
+    //     for(int i=0;i<n;++i){
+    //         sum+=x[i][j];
+    //     }
+    //     cout<<sum<<" ";
+    // }
+
+
+    // // 155---------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // for(int j=0;j<m;++j){
+    //     int min=x[0][j];
+    //     for(int i=0;i<n;++i){
+    //         if(min>x[i][j]){
+    //             min=x[i][j];
+    //         }
+    //     }
+    //     cout<<min<<" ";
+    // }
+
+
+    // // 156----------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // for(int j=0;j<m;++j){
+    //     int min=x[0][j];
+    //     int max=x[0][j];
+    //     for(int i=0;i<n;++i){
+    //         if(x[i][j]>max){
+    //             max=x[i][j];
+    //         }
+    //         if(x[i][j]<min){
+    //             min=x[i][j];
+    //         }
+
+    //     }
+    //     cout<<(max-min)<<" ";
+    // }
+
+
+    // 157-----------------------
+    int n,m;
+    cin>>n>>m;
+
+    int x[n][m];
 
     for(int i=0;i<n;++i){
-        for(int j=0;j<n;++j){
+        for(int j=0;j<m;++j){
             cin>>x[i][j];
         }
     }
 
-        for(int i=0;i<n;++i){
-            Msum+=x[i][i];
-        }
+    int ave=0;
+    for(int i=0;i<n;++i){
+        int max=x[i][0];
+        int min=x[i][0];
+        for(int j=0;j<m;++j){
+            if(x[i][j]>max){
+                max=x[i][j];
+            }
+            if(x[i][j]<min){
+                min=x[i][j];
+            }
 
-        for(int i=0;i<n;++i){
-        Ssum+=x[0][n-1-i];           
+        }
+        ave=(min+max)/2;
         
     }
+    cout<<ave<<" ";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
