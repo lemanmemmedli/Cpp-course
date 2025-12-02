@@ -328,7 +328,6 @@ int main()
     //         cin >> x[i][j];
     //     }
     // }
-    
 
     //     int max=x[0][0];
     //     int min=x[0][0];
@@ -370,14 +369,14 @@ int main()
     //         cin>>x[i][j];
     //     }
     // }
-    
+
     // for(int i=0;i<n;++i){
     //     bool flag=true;
     //     for(int j=0;j<n;++j){
     //         if(x[i][j]!=x[i][0]){
     //             flag=false;
     //             break;
-                
+
     //         }
     //     }
     //     if(flag){
@@ -385,37 +384,100 @@ int main()
     //     }
     // }
 
-    // 161-----------------------------------
-    int n;
-    cin>>n;
+    // // 161-----------------------------------
+    // int n;
+    // cin>>n;
+
+    // int x[n][n];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<n;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // for(int i=0;i<n;++i){
+    //         bool increase=true;
+    //         bool decrease=true;
+    //     for(int j=1;j<n;++j){
+    //         if(x[i][j]<=x[i][j-1]){
+    //             increase=false;
+    //         }
+    //         if(x[i][j]>=x[i][j-1]){
+    //             decrease=false;
+    //         }
+    //     }
+    //     if(increase || decrease){
+    //         cout<<i+1;
+    //     }
+    // }
+
+    // // 162----------------------------
+    // int n;
+    // cin >> n;
+
+    // int x[n][n];
+
+    // for (int i = 0; i < n; ++i)
+    // {
+    //     for (int j = 0; j < n; ++j){
+    //         cin >> x[i][j];
+    //     }       
+    // }
+
+    // for (int j = 0; j < n; ++j)
+    // {
+    //     bool poll = true;
+    //     for (int i = 0; i < n; ++i)
+    //     {
+
+    //         if (x[i][j] != x[n - 1 - i][j])
+    //         {
+    //             poll = false;
+    //         };
+            
+    //     }
+    //     if (poll)
+    //     {
+    //             cout << j + 1 << " ";
+    //     }
+    // }
 
 
-    int x[n][n];
+    // 163--------------------------------
+    int n,m;
+    cin>>n>>m;
+
+    int x[n][m];
+
 
     for(int i=0;i<n;++i){
-        for(int j=0;j<n;++j){
+        for(int j=0;j<m;++j){
             cin>>x[i][j];
         }
     }
 
+    int a,b;
+    cin>>a>>b;
+
+    a--;
+    b--;
 
     for(int i=0;i<n;++i){
-            bool increase=true;
-            bool decrease=true;
-        for(int j=1;j<n;++j){
-            if(x[i][j]<=x[i][j-1]){
-                increase=false;
-            }
-            if(x[i][j]>=x[i][j-1]){
-                decrease=false;
-            }
-        }
-        if(increase || decrease){
-            cout<<i+1;
-        }
+            int temp=x[i][a];
+            x[i][a]=x[i][b];
+            x[i][b]=temp;
+
     }
 
-    
+
+    for(int i=0;i<n;++i){
+        for(int j=0;j<m;++j){
+            cout<<x[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
 
 
 
