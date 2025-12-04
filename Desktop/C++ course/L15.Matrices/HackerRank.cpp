@@ -422,7 +422,7 @@ int main()
     // {
     //     for (int j = 0; j < n; ++j){
     //         cin >> x[i][j];
-    //     }       
+    //     }
     // }
 
     // for (int j = 0; j < n; ++j)
@@ -435,7 +435,7 @@ int main()
     //         {
     //             poll = false;
     //         };
-            
+
     //     }
     //     if (poll)
     //     {
@@ -443,42 +443,103 @@ int main()
     //     }
     // }
 
+    // // 163--------------------------------
+    // int n,m;
+    // cin>>n>>m;
 
-    // 163--------------------------------
-    int n,m;
-    cin>>n>>m;
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // int a,b;
+    // cin>>a>>b;
+
+    // a--;
+    // b--;
+
+    // for(int i=0;i<n;++i){
+    //         int temp=x[i][a];
+    //         x[i][a]=x[i][b];
+    //         x[i][b]=temp;
+
+    // }
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<m;++j){
+    //         cout<<x[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
+
+    // 164-------------------------
+    // int n=5;
+    // int m=6;
+
+    // int x[n][m];
+
+    // for(int i=0;i<n;++i){
+    //     for(int j=0;j<n;++j){
+    //         cin>>x[i][j];
+    //     }
+    // }
+
+    // int num=1;
+
+    // for(int i=0;i<n;++i){
+    //     if(i % 2 ==0){
+    //         for(int j=0;j<m;++j){
+    //         cout<<x[i][j]<<" ";
+    //         num++;
+    //     }
+
+    //     }
+    //     else{
+    //         for(int j=m-1;j>=0;++j){
+    //         cout<<x[i][n-1-j]<<" ";
+    //         num++;
+    //     }
+    //     }
+
+    // }
+
+    // 165-------------------------
+    int n = 5;
+    int m = 6;
 
     int x[n][m];
 
-
-    for(int i=0;i<n;++i){
-        for(int j=0;j<m;++j){
-            cin>>x[i][j];
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            cin >> x[i][j];
         }
     }
 
-    int a,b;
-    cin>>a>>b;
+    int num=1;
 
-    a--;
-    b--;
-
-    for(int i=0;i<n;++i){
-            int temp=x[i][a];
-            x[i][a]=x[i][b];
-            x[i][b]=temp;
-
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            x[i][j]=num++;
+            
+        }
     }
 
-
-    for(int i=0;i<n;++i){
-        for(int j=0;j<m;++j){
-            cout<<x[i][j]<<" ";
+    for (int i = 0; i < n; ++i)
+    {
+        for (int j = 0; j < m; ++j)
+        {
+            cout<< x[i][j]<<" ";
+            num++;
         }
         cout<<endl;
     }
-
-
 
 
 
