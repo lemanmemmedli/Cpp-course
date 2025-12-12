@@ -198,10 +198,21 @@ int main(){
     obj.printcat();
 
     
-
-
     
+
+    D first;
+    first.doSomething();
 
 
 
 }
+class D {
+    public:
+        void doSomething() {
+            helperFunction(this);   // Passing the current object as a parameter
+        }
+
+        void helperFunction(D *obj) {
+            // Perform operations on the passed object
+        }
+};
