@@ -35,7 +35,33 @@ using namespace std;
 
 
 
-/*  Solution */
+class Book{
+    private:
+    string Title;
+    string Author;
+    int Publication_Year;
+    string ISBN;
+
+    public:
+
+    void set_details(string Title,string Author,int Publication_Year,string ISBN){
+        this->Title=Title;
+        this->Author=Author;
+        this->Publication_Year=Publication_Year;
+        this->ISBN=ISBN;
+        
+    }
+
+    void display_details(){
+        cout<<"Title: "<<Title<<endl;
+        cout<<"Author: "<<Author<<endl;
+        cout<<"Publication_Year: "<<Publication_Year<<endl;
+        cout<<"ISBN: "<<ISBN<<endl;
+    }
+    
+
+
+};
 
 
 
@@ -43,19 +69,19 @@ int main() {
 
     /*      Example usage:     */
     Book book1;
-    book1.setBookDetails("The Great Gatsby", "F. Scott Fitzgerald", 1925, "9780743273565");
+    book1.set_details("Chess","Stefan Zweig",1942,"998887777727274");
 
     Book book2;
-    book2.setBookDetails("To Kill a Mockingbird", "Harper Lee", 1960, "9780060935467");
+    book2.set_details("White Nights","Stefan Zweig",1942,"12345677889");
 
     // Display book details
     cout << "Book 1 Details:" << endl;
-    book1.displayBookDetails();
+    book1.display_details();
     cout << endl;
 
     cout << "Book 2 Details:" << endl;
-    book2.displayBookDetails();
+    book2.display_details();
     cout << endl;
 
-    return 0;
+    
 }

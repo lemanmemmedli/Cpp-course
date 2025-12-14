@@ -28,7 +28,41 @@ class BankAccount {
     public:
         // Constructor
         BankAccount(int accountNumber, const string &holderName, double initialBalance) {
-            // TODO: Initialize member variables
+            this->accountNumber=accountNumber;
+            this->holderName=holderName;
+            balance=initialBalance;
+        }
+        BankAccount(){
+            accountNumber=0;
+            holderName="Unknown";
+            balance=0.0;
+        }
+
+        void set_Balance(double ballance){
+            if(ballance>0){
+               balance=ballance;
+            }else{
+                cout<<"invalid balance!!!"<<endl;
+            }
+            
+        }
+        void Deposit(double amount){
+            if(amount>0){
+                balance+=amount;
+            }else{
+                cout<<"invalid amount"<<endl;
+            }
+        }
+        void Withdraw(double amount){
+             if(amount>0){
+                balance-=amount;
+             }else{
+                cout<<"invalid withdraw"<<endl;
+             }
+        }
+
+        float get_balance(){
+            return balance;
         }
 
         // Member functions
@@ -55,6 +89,17 @@ int main() {
         This exercise will help you practice encapsulation and understand how to hide 
         implementation details while exposing a controlled interface to the users of your class!
     */
+   BankAccount account(987,"Jane",2000.0);
+   cout<<"Fisrt Balance: "<<account.get_balance()<<endl;
+
+   account.Deposit(300.0);
+   cout<<"Deposit+Balance: "<<account.get_balance()<<endl;
+
+   account.Withdraw(300.9);
+   cout<<"Balance-Withdrow: "<<account.get_balance()<<endl;
+
+
+
 
     return 0;
 }

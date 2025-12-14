@@ -37,7 +37,59 @@ using namespace std;
 
 
 
-/*  Solution */
+
+class Employee{
+    private:
+    int Employee_ID;
+    string Employee_name;
+    string Employee_designation;
+    float Employee_salary;
+
+
+    public:
+    Employee()=default;
+    Employee(int Employee_ID,string Employee_name,string Employee_designation,float Employee_salary){
+        this->Employee_ID=Employee_ID;
+        this->Employee_name=Employee_name;
+        this->Employee_designation=Employee_designation;
+        this->Employee_salary=Employee_salary;
+    };
+
+    void set_Employee_ID(int Employee_ID){
+        this->Employee_ID=Employee_ID;
+    }
+    void set_Employee_name(string Employee_name){
+        this->Employee_name=Employee_name;
+    }
+    void set_Employee_designation(string Employee_designation){
+        this->Employee_designation=Employee_designation;
+    }
+    void set_Employee_salary(float Employee_salary){
+        this->Employee_salary=Employee_salary;
+    }
+    int get_Employee_ID(){
+        return Employee_ID;
+    }
+    string get_Employee_name(){
+        return Employee_name;
+    }
+    string get_Employee_designation(){
+        return Employee_designation;
+    }
+    float get_Employee_salary(){
+        return Employee_salary;
+    }
+
+    void displayDetails(){
+        cout<<"Employee_ID: "<<Employee_ID<<endl;
+        cout<<"Employee_name: "<<Employee_name<<endl;
+        cout<<"Employee_designation: "<<Employee_designation<<endl;
+        cout<<"Employee_salary: "<<Employee_salary<<endl;
+    }
+
+
+
+};
 
 
 
@@ -46,13 +98,14 @@ int main() {
     /*      Example usage:     */ 
 
     // Creating employee objects using different constructors
-    Employee emp1(101, "John Doe", "Manager", 5000.0);
+    Employee emp1(123, "Johns", "Manager", 1000.0);
     Employee emp2;
 
-    emp2.setID(102);
-    emp2.setName("Jane Smith");
-    emp2.setDesignation("Engineer");
-    emp2.setSalary(4000.0);
+    emp2.set_Employee_ID(321);
+    emp2.set_Employee_name("Jane");
+    emp2.set_Employee_designation("Creator");
+    emp2.set_Employee_salary(3000.5);
+
 
     // Displaying employee details
     cout << "Employee 1 Details: " << endl;
@@ -63,5 +116,5 @@ int main() {
     emp2.displayDetails();
     cout << endl;
 
-    return 0;
+    
 }
