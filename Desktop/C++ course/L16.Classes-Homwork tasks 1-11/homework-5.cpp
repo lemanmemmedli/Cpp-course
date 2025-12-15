@@ -1,12 +1,14 @@
 #include <iostream>
 
+#include "Product.h"
+#include "Order.h"
 using namespace std;
 
 /*
     Exercise: Online Shop System
 
     Description:
-    Design and implement an Online Shop System using multiple files and classes in C++. 
+    Design and implement an Online Shop System using multiple files and classes in C++.
     The system should allow you to manage products and orders in an online shop.
 
     Requirements:
@@ -23,36 +25,48 @@ using namespace std;
         Customer name (a string)
         Ordered products (an array/vector of Product objects)
         (Vectors: https://www.geeksforgeeks.org/vector-in-cpp-stl/)
-    
-    4. Define the "Product" class in a separate header file called "Product.h" 
+
+    4. Define the "Product" class in a separate header file called "Product.h"
     and implement its member functions.
 
-    5. Define the "Order" class in a separate header file called "Order.h" 
+    5. Define the "Order" class in a separate header file called "Order.h"
     and implement its member functions
 
     6. Include the necessary header files in the main program file.
 
-    7. Demonstrate the functionality of the Online Shop System by creating products, 
+    7. Demonstrate the functionality of the Online Shop System by creating products,
     creating orders, and performing operations like adding products to orders, calculating order totals, etc.
 
     Tips:
 
     Use header files to declare the class structure and member function prototypes.
     Use include guards or pragma once to prevent multiple inclusion of header files.
-    
-    This exercise will help you practice creating separate classes in different files 
+
+    This exercise will help you practice creating separate classes in different files
     and including them in a main program file to build a functional Online Shop System!
 */
 
+class Product
+{
+    private:
+    int Product_ID;
+    string Product_name;
+    float Product_price;
 
-/* 
-    Solution
-*/
 
 
+};
+
+class Order{
+    private:
+    int Order_ID;
+    string Customer_name;
 
 
-int main() {
+};
+
+
+int main(){
 
     system("clear");
 
@@ -77,10 +91,11 @@ int main() {
     cout << "Customer Name: " << order.getCustomerName() << endl;
     cout << "Ordered Products:" << endl;
 
-    for (const Product& product : order.getOrderedProducts()) {
+    for (const Product &product : order.getOrderedProducts())
+    {
         cout << " - " << product.getProductName() << endl;
     }
-    
+
     cout << "Total: $" << total << endl;
 
     return 0;
