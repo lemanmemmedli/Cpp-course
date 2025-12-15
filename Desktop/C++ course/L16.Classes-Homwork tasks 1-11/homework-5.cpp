@@ -1,8 +1,10 @@
 #include <iostream>
+#include <vector>
+
+using namespace std;
 
 #include "Product.h"
 #include "Order.h"
-using namespace std;
 
 /*
     Exercise: Online Shop System
@@ -46,29 +48,12 @@ using namespace std;
     and including them in a main program file to build a functional Online Shop System!
 */
 
-class Product
+
+
+int main()
 {
-    private:
-    int Product_ID;
-    string Product_name;
-    float Product_price;
 
-
-
-};
-
-class Order{
-    private:
-    int Order_ID;
-    string Customer_name;
-
-
-};
-
-
-int main(){
-
-    system("clear");
+    system("cls");
 
     // Create products
     Product p1(1, "Product 1", 10.0);
@@ -87,13 +72,13 @@ int main(){
     double total = order.calculateOrderTotal();
 
     // Display the order details
-    cout << "Order ID: " << order.getOrderID() << endl;
-    cout << "Customer Name: " << order.getCustomerName() << endl;
+    cout << "Order ID: " << order.get_Order_ID() << endl;
+    cout << "Customer Name: " << order.get_Customer_name() << endl;
     cout << "Ordered Products:" << endl;
 
-    for (const Product &product : order.getOrderedProducts())
+    for (const Product &product : order.get_Ordered_products())
     {
-        cout << " - " << product.getProductName() << endl;
+        cout << " - " << product.get_Product_name() << endl;
     }
 
     cout << "Total: $" << total << endl;
