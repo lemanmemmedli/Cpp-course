@@ -46,13 +46,84 @@ using namespace std;
 */
 
 
-/* 
-    Solution 
-*/
+class BankAccount{
+    private:
+    int accountNumber;
+    double balance;
 
+    public:
+    BankAccount(int accNumber){
+        accountNumber=accNumber;
+        balance=0;
+    }
+    BankAccount()=default;
+
+    void deposit(double amount){
+        if(amount>0){
+            balance+=amount;
+        }else{
+            cout<<"Invalid deposit!"<<endl;
+        }
+    }
+
+    void withdraw(double amount){
+        if(amount>0){
+            balance-=amount;
+        }else{
+            cout<<"Invalid withdraw!"<<endl;
+        }
+    }
+    void displayBalance(){
+        cout<<balance<<endl;
+    }
+
+};
+
+BankAccount array[3];
+
+class Bank{
+    private:
+    BankAccount* accounts;
+    int numAccounts;
+
+    public:
+
+    Bank(int num){
+        numAccounts = num;
+        
+    }
+    ~Bank(){
+
+    }
+    void performTransactions(){
+        //  BankAccount *a1;
+        
+        // accounts=new BankAccount(1);
+        // (accounts+1)=new BankAccount(2);
+        // (accounts+2)=new BankAccount(3);
+        accounts=array;
+        accounts->deposit(500);
+        (accounts+1)->deposit(1001);
+        (accounts+2)->deposit(1000);
+
+      
+    }
+
+    void displayAllBalances(){
+        for(int i=0;i<numAccounts;++i){
+           (accounts+i)->displayBalance();
+        }
+    }
+
+
+
+
+
+};
 
 
 int main() {
+    system("cls");
 
     /*      Example usage:     */
     Bank bank(3);

@@ -25,7 +25,15 @@ using namespace std;
 
 /* Solution */
 struct Student {
-    // Complete the code
+    string name;
+    string roll;
+    int number;
+    double Maths;
+    double Physics;
+    double Chemistr;
+
+
+    
 };
 
 class Classroom {
@@ -33,7 +41,32 @@ class Classroom {
         vector<Student> students;
 
     public:
-        // Complete the code
+
+    void Add(Student student){
+        students.push_back(student);
+    }
+
+    void  Display(){
+        for(const Student &s : students){
+            cout<<s.name<<endl;
+            cout<<s.roll<<endl;
+            cout<<s.number<<endl;
+            cout<<s.Maths<<endl;
+            cout<<s.Physics<<endl;
+            cout<<s.Chemistr<<endl;
+            
+        }
+
+    }
+
+    void displayave(){
+        for(const Student &s : students){
+            double ave=(s.Maths+s.Chemistr+s.Physics)/3;
+            cout<<s.name<<ave<<endl;
+        }
+
+    }
+        
 };
 
 
@@ -54,23 +87,23 @@ int main() {
         cout << "Name: ";
         cin >> student.name;
         cout << "Roll Number: ";
-        cin >> student.rollNumber;
+        cin >> student.roll;
         cout << "Maths Marks: ";
-        cin >> student.mathMarks;
+        cin >> student.Maths;
         cout << "Physics Marks: ";
-        cin >> student.physicsMarks;
+        cin >> student.Physics;
         cout << "Chemistry Marks: ";
-        cin >> student.chemistryMarks;
+        cin >> student.Chemistr;
 
-        classroom.addStudent(student);
+        classroom.Add(student);
         cout << endl;
     }
 
     cout << "Details of all students:" << endl;
-    classroom.displayStudents();
+    classroom.Display();
 
     cout << "Average marks of each student:" << endl;
-    classroom.displayAverageMarks();
+    classroom.displayave();
     
     return 0;
 }

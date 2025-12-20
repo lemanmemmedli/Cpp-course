@@ -26,7 +26,52 @@ using namespace std;
 */
 
 
-/* Solution */
+class MathOperations{
+    private:
+    int result;
+
+
+
+    public:
+     MathOperations (int ress){
+        result=ress;
+     }
+
+
+    MathOperations  *add(int val){
+            result+=val;
+            return this;
+    };
+
+    MathOperations  *subtract(int val){
+            result-=val;
+            return this;
+    };
+    MathOperations  *multiply(int val){
+            result*=val;
+            return this;
+    };
+    MathOperations  *divide(int val){
+        if(val==0){
+            cout<<"Error: Cannot divide by 0"<<endl;
+        }else{
+            result/=val;
+            return this;
+        }
+            
+    };
+
+
+    
+
+    int getResult(){
+        return result;
+    }
+
+    
+
+
+};
 
 
 
@@ -36,7 +81,7 @@ int main() {
     /*      Example usage:     */
     MathOperations math(10);
     
-    math.add(5)->subtract(2)->multiply(3)->divide(4);
+    math.add(10)->multiply(2)->subtract(5)->divide(5);
     
     cout << "Final result: " << math.getResult() << endl;
     

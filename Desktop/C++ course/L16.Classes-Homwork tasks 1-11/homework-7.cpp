@@ -35,24 +35,59 @@ using namespace std;
     Solution 
 */
 class BankAccount {
-}
+    private:
+    int accountNumber;
+    double balance;
+
+    public:
+    BankAccount(int accountNumber){
+        this->accountNumber=accountNumber;
+       
+    }
+    ~BankAccount(){
+        cout<<"Your bank account has been closed."<<accountNumber<<endl;
+    }
+
+    void deposit(double amount){
+        if(amount>0){
+            balance+=amount;
+        }else{
+            cout<<"Invalid amount"<<endl;
+        }
+    }
+
+    void withdraw(double amount){
+        if(amount>0){
+            balance-=amount;
+        }else{
+            cout<<"Invalid witdhdraw"<<endl;
+        }
+    }
+
+    double getBalance(){
+        return balance;
+    }
+
+
+
+
+
+};
+
 
 
 int main() {
 
     /*      Example usage:     */ 
 
-    BankAccount account1(12345); // Account 1 created
-    BankAccount account2(67890); // Account 2 created
+    BankAccount account1(12345);
+    BankAccount account2(2468);
 
-    account1.deposit(1000);
-    account2.deposit(500);
+    account1.deposit(500.0);
+    account2.deposit(2500.0);
 
-    cout << "Balance of account 1: " << account1.getBalance() << endl;
-    cout << "Balance of account 2: " << account2.getBalance() << endl;
-
-    // Account 1 closed (when account1 goes out of scope)
-    // Account 2 closed (when account2 goes out of scope)
+    cout<<"Account 1 Balance: "<<account1.getBalance()<<endl;
+    cout<<"Account 2 Balance: "<<account2.getBalance()<<endl;
 
     return 0;
 }
