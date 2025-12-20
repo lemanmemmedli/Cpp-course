@@ -125,8 +125,113 @@ using namespace std;
     This exercise will help you understand how to implement a linked list using OOP principles in C++.
 */
 
+// Exercise:1
 
-/* Solution */
+struct Node{
+    int Data;
+    Node *next;
+
+    Node(int val){
+        Data=val;
+        next=nullptr;
+    }
+};
+
+// Exercise:2
+
+class LinkedList{
+    private:
+    Node *head;
+
+
+    public:
+    LinkedList(){
+        head=nullptr;
+    }
+
+    LinkedList& insert(int val){
+        Node* newNode=new Node(val);
+        newNode->next=head;
+        head=newNode;
+        return *this;
+
+    }
+    LinkedList& append(int val){
+        Node* newNode=new Node(val);
+           if (head == nullptr) {
+            head = newNode;
+            return *this;;
+        }
+        Node* temp = head;
+        while (temp->next != nullptr) {
+            temp = temp->next;
+        }
+        temp->next=newNode;
+        return *this;
+    }
+
+
+    LinkedList& display(){
+         Node *temp=head;
+         while(temp != nullptr){
+            cout<<temp->Data<<"->";
+            temp=temp->next;
+         }
+         cout<<"Null"<<endl;
+         return *this;
+    }
+
+    bool search(int val){
+        Node *temp=head;
+
+        while(temp != nullptr){
+            if(temp->Data==val){
+               return true;
+            }
+            temp=temp->next;
+        }
+        return false;
+    }
+    LinkedList& remove(int val) {
+        // siyahı boşdursa
+        if (head == nullptr)
+            return *this;;
+
+        // əgər silinəcək dəyər head-dədirsə
+        if (head->Data == val) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+            return *this;
+        }
+
+        Node* current = head;
+
+        // silinəcək node-u tap
+        while (current->next != nullptr &&
+               current->next->Data != val) {
+            current = current->next;
+        }
+
+        // tapılıbsa sil
+        if (current->next != nullptr) {
+            Node* temp = current->next;
+            current->next = temp->next;
+            delete temp;
+        }
+        return *this;
+
+        
+    }
+        ~LinkedList() {
+        while (head != nullptr) {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }
+    }
+};
+
 
 
 
