@@ -193,11 +193,9 @@ class LinkedList{
         return false;
     }
     LinkedList& remove(int val) {
-        // siyahı boşdursa
         if (head == nullptr)
-            return *this;;
+            return *this;
 
-        // əgər silinəcək dəyər head-dədirsə
         if (head->Data == val) {
             Node* temp = head;
             head = head->next;
