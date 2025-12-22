@@ -205,13 +205,11 @@ class LinkedList{
 
         Node* current = head;
 
-        // silinəcək node-u tap
         while (current->next != nullptr &&
                current->next->Data != val) {
             current = current->next;
         }
 
-        // tapılıbsa sil
         if (current->next != nullptr) {
             Node* temp = current->next;
             current->next = temp->next;

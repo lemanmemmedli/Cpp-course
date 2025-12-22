@@ -37,13 +37,13 @@ class LinkedList{
 
     }
     void insertAtTail(int val){
-        Node* newnode=new Node(val);
+        Node* newNode=new Node(val);
         if(!head){
-            head=tail=newnode;
-        }else{
-            tail->next=newnode;
-            tail=newnode;
+            head=tail=newNode;
+
         }
+        tail->next=newNode;
+        tail=newNode;
     }
     LinkedList& append(int val){
         Node* newNode=new Node(val);
@@ -61,8 +61,8 @@ class LinkedList{
 
 
     LinkedList& display(){
-         Node *temp=head;
-         while(temp != nullptr){
+        Node *temp=head;
+        while(temp != nullptr){
             cout<<temp->Data<<"->";
             temp=temp->next;
          }
