@@ -154,35 +154,39 @@ class LinkedList{
         newNode->next=head;
         head=newNode;
         return *this;
-
     }
+
     LinkedList& append(int val){
         Node* newNode=new Node(val);
-           if (head == nullptr) {
-            head = newNode;
-            return *this;;
+        if(head==nullptr){
+            head=newNode;
+            return *this;
+
         }
-        Node* temp = head;
-        while (temp->next != nullptr) {
-            temp = temp->next;
+        Node* temp=head;
+        while(temp->next != nullptr){
+            temp=temp->next;     
         }
         temp->next=newNode;
         return *this;
+        
+
     }
 
+    LinkedList &display(){
+        Node* temp=head;
 
-    LinkedList& display(){
-         Node *temp=head;
-         while(temp != nullptr){
+        while(temp !=nullptr){
             cout<<temp->Data<<"->";
             temp=temp->next;
-         }
-         cout<<"Null"<<endl;
-         return *this;
+        }
+        cout<<"NULL"<<endl;
+        return *this;
+
     }
 
     bool search(int val){
-        Node *temp=head;
+        Node* temp=head;
 
         while(temp != nullptr){
             if(temp->Data==val){
@@ -192,33 +196,34 @@ class LinkedList{
         }
         return false;
     }
-    LinkedList& remove(int val) {
-        if (head == nullptr)
-            return *this;
 
-        if (head->Data == val) {
-            Node* temp = head;
-            head = head->next;
+    LinkedList& remove(int val){
+        if(head==nullptr){
+            return *this;
+        }
+
+        if(head->Data == val){
+            Node* temp= head;
+            head=head->next;
             delete temp;
             return *this;
         }
 
-        Node* current = head;
+        Node* current=head;
 
-        while (current->next != nullptr &&
-               current->next->Data != val) {
-            current = current->next;
+        while(current->next != nullptr && current->next->Data != val){
+             current=current->next;
         }
 
-        if (current->next != nullptr) {
-            Node* temp = current->next;
-            current->next = temp->next;
-            delete temp;
+        if(current->next != nullptr){
+            Node* temp=current->next;
+            current->next=temp->next;
+            delete temp;         
+            
         }
         return *this;
-
-        
     }
+
         ~LinkedList() {
         while (head != nullptr) {
             Node* temp = head;
