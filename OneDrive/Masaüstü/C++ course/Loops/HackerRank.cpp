@@ -1,0 +1,451 @@
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+
+    // 48----------------------
+    // int N;
+    // int counter=0;
+    // cin >> N;
+
+    // while(N>0){
+    //     counter++;
+    //     N=N/10;
+    // }
+    // cout << counter <<endl;
+
+    // // 50-------------------------
+
+    // int N;
+    // int odd=0;
+    // cin >> N;
+
+    // while(N>0){
+    //     int tail=N%10;
+    //     if(tail%2 !=0){
+    //         odd++;
+    //     }
+    //     N=N/10;
+    // }
+    // cout << odd <<endl;
+
+    // // 54--------------------
+    // int N;
+    // cin >> N;
+
+    // for (int i = 1; i <= N; ++i){
+
+    //     int number=i;
+    //     bool print =true;
+
+    //     while (number>0){
+    //         int tail= number %10;
+
+    //         if(tail==0){
+    //             print =false;
+    //             break;
+
+    //         }
+    //         else{
+    //             if(i%tail !=0){
+    //                 print=false;
+    //                 break;
+    //             }
+    //         }
+    //         number=number/10;
+
+    //     }
+    //     if(print ==true){
+    //         cout << i << " ";
+    //     }
+
+    // }
+    // cout << endl;
+
+    // 49----------------
+    // int N;
+    // cin>>N;
+    // int sum=0;
+
+    //     while (N>0)
+    //     {
+    //     int tail=N%10;
+    //     sum=sum+tail;
+    //     N=N/10;
+    //     }
+
+    //     cout<<sum<<endl;
+
+    // 52------------------
+    // int N;
+    // cin >> N;
+    // int max=0;
+    // if (N == 0)
+    // {
+    //     max = 0;
+    // }
+    // else
+    // {
+    //     while (N > 0)
+    //     {
+    //         int tail = N % 10;
+    //         if (tail>max)
+    //         {
+    //             max = tail ;
+    //         }
+    //         N = N / 10;
+    //     }
+    // }
+
+    // cout << max << endl;
+
+    // // 53-----------1ci usul-----------------
+    // int N;
+    // cin >> N;
+    // int max = 0;
+    // int temp=N;
+
+    //     while (temp > 0)
+    //     {
+    //         int tail = temp % 10;
+    //         if (tail > max)
+    //         {
+    //             max = tail;
+    //         }
+    //         temp = temp / 10;
+    //     }
+
+    //     int count=0;
+    //     while(N>0){
+    //         int tail = N % 10;
+    //         if (tail == max)
+    //         {
+    //             count++;
+    //         }
+    //         N = N / 10;
+    //     }
+    // cout << count << endl;
+    // // ----------------2ci usul-------------------
+    //     int N;
+    //     cin>> N;
+    //     int maxdigit=0;
+    //     int count=0;
+
+    //     while(N>0){
+    //         int tail=N%10;
+    //         if(tail>maxdigit){
+    //            maxdigit=tail;
+    //            count=1;
+
+    //         }
+    //         else if(tail==maxdigit){
+    //             count++;
+    //         }
+    //         N=N/10;
+    //     }
+    //     cout << count << endl;
+
+    // // 55------------------------------------
+    // int N;
+    // cin >> N;
+    // bool found = false;
+
+    // for (int i = 1; i * i <= N; i++)
+    // {
+    //     for (int j = 1; j * j <= N; j++)
+    //     {
+    //         if (i != j && i * i + j * j == N)
+    //         {
+    //             found = true;
+    //             break;
+    //         }
+
+    //     }
+    //     if (found)
+    //         {
+    //             break;
+    //         }
+    // }
+    // if (found)
+    // {
+    //     cout << "YES" << endl;
+    // }
+    // else
+    // {
+    //     cout << "NO" << endl;
+    // }
+
+    // 56-----------------------
+    // int N;
+    // cin >> N;
+
+    // for (int i=1;i*i<=N;i++){
+    //     for(int j=i+1;j*j<=N;j++){
+    //         if(i != j && i*i + j*j<=N){
+    //            int result=i*i+j*j;
+    //            cout<<i <<"^2 "<<"+ "<<j << "^2"<<" "<<"="<<" "<<result<<endl;
+    //         }
+    //     }
+    // }
+
+    // // 57------------------------
+    // int A, B;
+    // cin >> A >> B;
+
+    // while (A > 0 && B > 0)
+    // {
+    //     if (B % A == 0)
+    //     {
+    //         cout << A << endl;
+    //         break;
+    //     }
+    //     else
+    //     {
+    //         int res = B-A;
+    //         cout << res << endl;
+    //         break;
+    //     }
+    // }
+
+    // // 58---------------------
+    // int A,B,lcm;
+    // cin >> A>>B;
+
+    // for(int i=A*B; i>0;i--){
+    //     if(i%A==0 && i%B==0 ){
+    //         lcm=i;
+    //     }
+    // }
+    // cout << lcm <<endl;
+
+    // // 59----------------------------
+    // int N,lcm=1;
+    // cin >> N;
+
+    // for(int i=2;i<=N;i++){
+    //     for(int j=lcm;j<=lcm*i;j++){
+    //         if(j%i==0 && j%lcm==0){
+    //             lcm=j;
+    //             break;
+    //         }
+    //     }
+    // }
+    // cout<<lcm<<endl;
+
+    // // 60-----------------------
+    // int N;
+    // cin >> N;
+    // for (int i=1;i<=N;i++){
+    //     if(N%i==0){
+    //         cout << i <<" ";
+    //     }
+    // }
+
+    // 51-----------------------------
+    // int NN,N,M = 0;
+    // cin >> N;
+    // NN = N;
+
+    // while (N != 0)
+    // {
+    //     M = M * 10 + N % 10;
+    //     N /= 10;
+    // }
+    // if (NN == M)
+    // {
+    //     cout << "YES" << endl;
+    // }else
+    // {
+    //     cout << "NO" << endl;
+    // }
+
+    // // 61--------------
+    // int N;
+    // cin >> N;
+    // bool found=false;
+
+    // for(int i=0;pow(2,i)<=N;i++){
+    //     if((pow(2,i))==N){
+    //         found=true;
+    //         break;
+    //     }
+    // }
+
+    // if(found){
+    //     cout<<"Yes";
+    // }else{
+    //     cout<<"No";
+    // }
+
+    // // 62--------------------
+    // int N;
+    // cin >> N;
+    // bool found=true;
+
+    // if(N<2){
+    //     found=false;
+    // }
+
+    // for(int i=2 ;i<=N/2 ;i++){
+    //     if(N % i==0){
+    //         found=false;
+    //         break;
+    //     }
+    // }
+    // if(found){
+    //     cout<<"Yes";
+    // }else{
+    //     cout<<"No";
+    // }
+
+    // // 63------------------------
+    // int N1, N2;
+    // cin >> N1 >> N2;
+
+    // for (int i = N1; i <= N2; i++)
+    // {
+    //     if (i < 2) continue;
+
+    //         bool prime = true;
+
+    //     for (int j = 2; j <= i / 2; j++)
+    //     {
+    //         if (i % j == 0)
+    //         {
+    //             prime = false;
+
+    //             break;
+    //         }
+    //     }
+    //     if (prime)
+    //     {
+    //         cout << i << " ";
+    //     }
+    // }
+
+    // // 64---------------------------
+    //  int N;
+    //  cin >> N;
+
+    //  for (int i=2;i*i <=N;i++){
+    //     int count=0;
+    //     while(N%i==0){
+    //         count++;
+    //         N/=i;
+    //     }
+    //     if(count>0){
+    //         cout << i << "^" << count <<" ";
+    //     }
+    //  }
+    //  if(N>1){
+    //     cout<<N<< "^1";
+    //  }
+
+    // // 65----------------------------
+    // int N;
+    // cin >>N;
+
+    // for (int p=2;p<=N;p++){
+
+    //     bool prime=true;
+    //     if(p<2) prime=false;
+    //     for(int i=2;i*i<=p;i++){
+    //         if(p%i==0){
+    //             prime=false;
+    //             break;
+    //         }
+    //     }
+
+    //     if(prime){
+    //         int count=0;
+    //         int temp=N;
+    //         while(temp>0){
+    //             temp/=p;
+    //             count+=temp;
+    //         }
+    //         cout<<p<<"^"<<count<<" ";
+    //     }
+    // }
+
+    // 66--------------------
+    // int N=2;
+    // cin>>N;
+    // bool prime1=true;
+    // bool prime2=true;
+
+    // for(int i=2;i<=N;i++){
+    //     for(int k=2;k<i;k++){
+    //         if(i%k==0){
+    //             prime1=false;
+    //             break;
+    //         }
+    //     }
+    //     if(prime1 && (i+2)<=N){
+    //         for(int k=2;k<i+2;k++){
+    //             if((i+2)%k==0){
+    //                 prime2=false;
+    //                 break;
+    //             }
+    //         }
+    //         if(prime2){
+    //             cout<<'('<<i<<','<<' ' <<i+2<<')'<<endl;
+    //         }
+    //     }
+
+    //     prime1=true;
+    //     prime2=true;
+
+    // }
+
+    // // 68----------------------------
+    // int N=2;
+    // cin >> N;
+
+    // for (int i = 2; i <= N; i++)
+    // {
+    //     int sum = 0;
+    //     for (int j = 1; j < i; j++)
+    //     {
+    //         if (i % j == 0)
+    //         {
+    //             sum += j;
+
+    //         }
+    //     }
+    //     if (sum == i)
+    //             {
+
+    //                 cout << i << " ";
+    //             }
+    // }
+
+    //    67---------------------------
+    // int n,m;
+    // cin>>n>>m;
+
+    // for(int i=n;i<=m;++i){
+    //     int prime2=0;
+    //     for(int j=1;j<=i/2;++j){
+    //         if(i%j==0){
+    //             prime2+=j;
+    //         }
+
+    //     }
+    //     int prime1=0;
+    //     for(int k=1;k<=prime2/2;++k){
+    //         if(prime2%k==0){
+    //             prime1+=k;
+    //         }
+    //     }
+    //     if(i==prime1 && prime2>i && prime2<m){
+    //         cout<<'(' <<prime1<<", "<<prime2<<')'<<endl;
+    //     }
+    // }
+
+    // 59----------------
+    
+ 
+}
