@@ -55,7 +55,7 @@ int main() {
     child.print_var();           // Calls the method in Child
     child.Parent::print_var();   // Calls the method in Parent
 
-    cout << "--------" << endl;
+    cout << "-----------" << endl;
 
     child.show_values();
 
