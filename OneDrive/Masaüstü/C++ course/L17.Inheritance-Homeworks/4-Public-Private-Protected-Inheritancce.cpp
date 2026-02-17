@@ -55,7 +55,70 @@ using namespace std;
 
 
 /*  Solution  */
+class Vehicle{
+    protected:
+    int id;
+    int maxSpeed;
+    
+    public:
+    Vehicle(int idparam,int speedparam) : id(idparam),maxSpeed(speedparam){};
 
+    virtual void display(){
+        cout<<"ID: "<<id<<endl;
+        cout<<"MaxSpeed: "<<maxSpeed<<endl;
+    }
+    virtual ~Vehicle() {}
+
+
+};
+
+class Car : public Vehicle{
+    public:
+    int numDoors;
+
+    Car(int idparam,int speedparam,int doorsparam) : Vehicle(idparam,speedparam),numDoors(doorsparam){};
+
+
+    void calculateFuelEfficiency(){
+
+    }
+    
+    void display() override {
+        cout << "Car ID: " << id
+             << ", Max Speed: " << maxSpeed
+             << " km/h, Doors: " << numDoors << endl;
+    }
+
+
+};
+
+class Bus : public Vehicle{
+      public:
+      int maxPassengers;
+
+      Bus(int Passengersparam,int idparam,int speedparam) : Vehicle(idparam,speedparam),maxPassengers(Passengersparam){};
+
+
+      void announceNextStop(){
+
+      };
+
+};
+
+class Manager {
+    public:
+    vector<Vehicle*>fleets;
+
+    void addVehicle(Vehicle* fleet){
+        fleets.push_back(fleet);
+    }
+
+    void displayFleet(){
+         for(Vehicle* fleet : fleets){
+          fleet->display();
+    }   
+    }
+};
 
 
 

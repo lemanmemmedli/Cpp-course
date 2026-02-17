@@ -46,6 +46,85 @@ using namespace std;
 /*
     Solution
 */
+class Account{
+    protected:
+    int accountNumber;
+    string accountHolder;
+    double balance;
+
+
+    public:
+    Account(int numberparam,string holderparam,double balanceparam) 
+    : accountNumber(numberparam),accountHolder(holderparam),balance(balanceparam){};
+
+    void deposit(double amount){
+        if(amount>0){
+            balance+=amount;
+            cout<<"Deposit: "<<amount<<" Balance: "<<balance<<endl;
+        }else{
+         cout<<"invalid amount"<<endl;
+        }
+        
+    };
+
+    void withdraw(double amount){
+         if(amount>0){
+            balance-=amount;
+            cout<<"withdraw: "<<"Balance: "<<balance<<endl;
+         }else{
+            cout<<"invalid withdraw"<<endl;
+         }
+
+    };
+    float getBalance(){
+        return balance;
+    };
+
+};
+
+class SavingsAccount : public Account{
+    public:
+    SavingsAccount(int numberparam,string holderparam,double balanceparam) 
+    : Account(numberparam,holderparam, balanceparam){};
+
+    void applyInterest(double rate){
+        balance+=balance*rate;
+        cout<<"applyInterest: "<<balance<<endl;
+    };
+
+
+};
+
+class CheckingAccount : protected Account{
+    public:
+    CheckingAccount(int numberparam,string holderparam,double balanceparam) 
+    : Account(numberparam,holderparam, balanceparam){};
+
+    void applyMonthlyFee(double fee){
+        if(balance>=fee){
+            balance-=fee;
+            cout<<"applyMonthlyFee: "<<balance<<endl;
+        }
+        else{
+           cout<<"No balance"<<endl;
+        }
+    };
+};
+
+class CreditCardAccount : private Account{
+    public:
+        CreditCardAccount(int numberparam, string holderparam, double balanceparam)
+        : Account(numberparam, holderparam, balanceparam) {}
+
+      void makePurchase(double amount){
+        if(balance>= amount){
+            balance-=amount;
+            cout<<"makePurchase: "<<"amount: "<<amount<<"-"<<"balance: "<<balance<<endl;
+        }else{
+            cout<<"No balance"<<endl;
+        }
+      }
+};
 
 
 int main() {

@@ -54,6 +54,21 @@ class GameObject {
         string name;
 };
 
+class  Weapon : public GameObject{
+    public:
+    int damage;
+
+    Weapon(const string& name, int damageParam)
+        : GameObject(name), damage(damageParam) {}
+
+    void displayInfoWeapon() {
+        displayInfo();  
+        cout << "Damage: " << damage << "\n";
+    }
+
+};
+
+// ------------------
 
 class Player : public GameObject {
     public:
@@ -89,7 +104,8 @@ class Enemy : public GameObject {
 
 class Character : public GameObject {
     public:
-        Character(const std::string& name, int level) : GameObject(name), level(level) {
+        Character(const std::string& name, int level,int experienceparam)
+         : GameObject(name), level(level),experience(experienceparam) {
             // Specific initialization for characters
         }
 
@@ -100,6 +116,7 @@ class Character : public GameObject {
 
     private:
         int level;
+        int experience;
 };
 
 
@@ -110,7 +127,9 @@ int main() {
     /*   Example Usage   */
     Player player("Hero", 100);
     Enemy enemy("Goblin", 20);
-    Character character("Adventurer", 5);
+    Character character("Adventurer", 5,20);
+
+    Weapon sword("Excalibur",50);
 
     player.displayInfoPlayer();
     cout << endl;
