@@ -82,7 +82,7 @@ int main() {
     // Raw pointers (no slicing)
     Shape *pShapes[] = {&circle, &square, &rectangle};
 
-    for (auto &shape : pShapes) {
+    for(auto &shape : pShapes){
         shape->area();
     }
 

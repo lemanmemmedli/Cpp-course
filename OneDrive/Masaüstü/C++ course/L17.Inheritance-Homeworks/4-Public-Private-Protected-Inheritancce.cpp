@@ -61,7 +61,8 @@ class Vehicle{
     int maxSpeed;
     
     public:
-    Vehicle(int idparam,int speedparam) : id(idparam),maxSpeed(speedparam){};
+    Vehicle(int idparam,int speedparam) 
+    : id(idparam),maxSpeed(speedparam){};
 
     virtual void display(){
         cout<<"ID: "<<id<<endl;
@@ -76,7 +77,8 @@ class Car : public Vehicle{
     public:
     int numDoors;
 
-    Car(int idparam,int speedparam,int doorsparam) : Vehicle(idparam,speedparam),numDoors(doorsparam){};
+    Car(int idparam,int speedparam,int doorsparam) 
+    : Vehicle(idparam,speedparam),numDoors(doorsparam){};
 
 
     void calculateFuelEfficiency(){
@@ -96,7 +98,8 @@ class Bus : public Vehicle{
       public:
       int maxPassengers;
 
-      Bus(int Passengersparam,int idparam,int speedparam) : Vehicle(idparam,speedparam),maxPassengers(Passengersparam){};
+      Bus(int Passengersparam,int idparam,int speedparam) 
+      : Vehicle(idparam,speedparam),maxPassengers(Passengersparam){};
 
 
       void announceNextStop(){
