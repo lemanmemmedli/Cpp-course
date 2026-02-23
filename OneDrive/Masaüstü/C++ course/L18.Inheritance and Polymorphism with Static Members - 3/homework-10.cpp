@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 
@@ -24,13 +24,28 @@ using namespace std;
 
 class Shape {
     public:
+
+    static void CompareAreas(double area1,double area2){
+        if(area1==area2){
+            cout<<"Areas are equal"<<endl;
+        }else if(area1>area2){
+          cout<<"Area 1 >  Area 2"<<endl;
+        }else{
+            cout<<"Area 2 >  Area 1"<<endl;
+        }
+    }
         // Static method to compare the areas of two shapes
         // Hint: You'll need to access the CalculateArea static methods in the derived classes.
 };
 
 class Circle : public Shape {
     public:
+    double radius;
         Circle(double radius) : radius(radius) {}
+
+        static double CalculateArea(double radius){
+            return M_PI*radius*radius;
+        }
 
         // Static method to calculate the area of a circle
         // Hint: Use the formula for calculating the area of a circle (A = π * r^2)
@@ -38,7 +53,14 @@ class Circle : public Shape {
 
 class Rectangle : public Shape {
     public:
-        Rectangle(double width, double height) : width(width), height(height) {}
+    double width;
+    double height;
+
+    Rectangle(double width, double height) : width(width), height(height) {}
+
+    static double CalculateArea(double width,double height){
+        return width * height;
+    }
 
         // Static method to calculate the area of a rectangle
         // Hint: Use the formula for calculating the area of a rectangle (A = width * height)
@@ -52,8 +74,16 @@ int main() {
 
     cout << "Enter the width and height of a rectangle: ";
     cin >> rectWidth >> rectHeight;
-
+  
     // Calculate and display the areas using the static methods
+    double circleArea=Circle::CalculateArea(circleRadius);
+    double rectangleArea=Rectangle::CalculateArea(rectWidth,rectHeight);
+
+    cout << "Circle area: " << circleArea << endl;
+    cout << "Rectangle area: " << rectangleArea << endl;
+
+    Shape::CompareAreas(circleArea,rectangleArea);
+
 
     // Implement comparisons of areas using the static method in the Shape class
 
